@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #4CAF50;
+            padding: 20px 0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar-title {
+            color: white;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            width: 80%;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .sidebar-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: #f0f2f5;
+        }
+
+        .welcome-header {
+            font-size: 2.2em;
+            color: #4CAF50;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-card-title {
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .stat-card-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                padding: 15px 0;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .sidebar-title {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .sidebar-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
+            .sidebar-nav a {
+                width: auto;
+                margin: 5px 8px;
+            }
+            .main-content {
+                padding: 20px;
+            }
+            .welcome-header {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-title">School Dashboard</div>
+        <div class="sidebar-nav">
+            <a href="#">Dashboard</a>
+            <a href="#">Students</a>
+            <a href="#">Teachers</a>
+            <a href="#">Classes</a>
+            <a href="#">Exams</a>
+            <a href="#">Library</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="welcome-header">Welcome to the School Dashboard</div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-card-title">Total Students</div>
+                <div class="stat-card-number">500</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-title">Total Teachers</div>
+                <div class="stat-card-number">50</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-title">Classes</div>
+                <div class="stat-card-number">20</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-title">Upcoming Exams</div>
+                <div class="stat-card-number">5</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
